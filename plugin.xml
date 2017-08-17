@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="cordova-plugin-retrofit-http" 
+	version="0.0.1" xmlns="http://apache.org/cordova/ns/plugins/1.0" 
+	xmlns:android="http://schemas.android.com/apk/res/android">
+	<name>cordova-plugin-retrofit-http</name>
+	<js-module name="cordova-plugin-retrofit-http" src="www/cordovaRetrofitHTTP.js">
+		<clobbers target="cordova.plugins.cordova-plugin-retrofit-http" />
+	</js-module>
+
+	<!-- android -->
+	<platform name="android">
+		<config-file parent="/*" target="res/xml/config.xml">
+			<feature name="cordova-plugin-retrofit-http">
+				<param name="android-package" value="com.CordovaRetrofitHttpPlugin" />
+			</feature>
+		</config-file>
+		
+		<config-file parent="/*" target="AndroidManifest.xml"></config-file>
+
+		<source-file src="support/libs/retrofit-2.3.0.jar" target-dir="libs" />
+		<source-file src="support/libs/converter-gson-2.3.0.jar" target-dir="libs" />
+		<source-file src= "support/libs/okhttp-3.8.1.jar" target-dir="libs" />
+
+		<source-file src="src/android/CordovaRetrofitHttpPlugin.java" target-dir="src/android" />
+		<source-file src="src/android/ApiService.java" target-dir="src/android" />
+		<source-file src="src/android/BaseResponse.java" target-dir="src/android" />
+		<source-file src="src/android/ApiUtils.java" target-dir="src/android" />
+		<source-file src="src/android/RetrofitHttpGet.java" target-dir="src/android" />
+		<source-file src="src/android/RetrofitHttpPost.java" target-dir="src/android" />
+		<source-file src="src/android/RetrofitClient.java" target-dir="src/android" />
+		<source-file src="src/android/RetrofitHttpRequest.java" target-dir="src/android" />
+
+	</platform>
+	
+
+</plugin>

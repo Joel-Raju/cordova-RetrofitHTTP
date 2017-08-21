@@ -10,8 +10,8 @@
 	<!-- android -->
 	<platform name="android">
 		<config-file parent="/*" target="res/xml/config.xml">
-			<feature name="cordova-plugin-retrofit-http">
-				<param name="android-package" value="com.CordovaRetrofitHttpPlugin" />
+			<feature name="CordovaRetrofitHttpPlugin">
+				<param name="android-package" value="com.itsoft.CordovaRetrofitHttpPlugin" />
 			</feature>
 		</config-file>
 		
@@ -19,16 +19,18 @@
 
 		<source-file src="support/libs/retrofit-2.3.0.jar" target-dir="libs" />
 		<source-file src="support/libs/converter-gson-2.3.0.jar" target-dir="libs" />
-		<source-file src= "support/libs/okhttp-3.8.1.jar" target-dir="libs" />
+		<source-file src="support/libs/okhttp-3.8.1.jar" target-dir="libs" />
+		<source-file src="support/libs/okio-1.13.0.jar" target-dir="libs" />
+		<source-file src="support/libs/gson-2.8.1.jar" target-dir="libs" />		
 
-		<source-file src="src/android/CordovaRetrofitHttpPlugin.java" target-dir="src/android" />
-		<source-file src="src/android/ApiService.java" target-dir="src/android" />
-		<source-file src="src/android/BaseResponse.java" target-dir="src/android" />
-		<source-file src="src/android/ApiUtils.java" target-dir="src/android" />
-		<source-file src="src/android/RetrofitHttpGet.java" target-dir="src/android" />
-		<source-file src="src/android/RetrofitHttpPost.java" target-dir="src/android" />
-		<source-file src="src/android/RetrofitClient.java" target-dir="src/android" />
-		<source-file src="src/android/RetrofitHttpRequest.java" target-dir="src/android" />
+		<source-file src="src/android/com/itsoft/CordovaRetrofitHttpPlugin/CordovaRetrofitHttpPlugin.java" target-dir="src/com/itsoft" />
+		<source-file src="src/android/com/itsoft/CordovaRetrofitHttpPlugin/ApiService.java" target-dir="src/com/itsoft" />
+		<source-file src="src/android/com/itsoft/CordovaRetrofitHttpPlugin/ApiUtils.java" target-dir="src/com/itsoft" />
+		<source-file src="src/android/com/itsoft/CordovaRetrofitHttpPlugin/RetrofitHttpGet.java" target-dir="src/com/itsoft" />
+		<source-file src="src/android/com/itsoft/CordovaRetrofitHttpPlugin/RetrofitHttpPost.java" target-dir="src/com/itsoft" />
+		<source-file src="src/android/com/itsoft/CordovaRetrofitHttpPlugin/RetrofitClient.java" target-dir="src/com/itsoft" />
+		<source-file src="src/android/com/itsoft/CordovaRetrofitHttpPlugin/RetrofitHttpRequest.java" target-dir="src/com/itsoft" />
+		<source-file src="src/android/com/itsoft/CordovaRetrofitHttpPlugin/Tls12SocketFactory.java" target-dir="src/com/itsoft" />
 
 	</platform>
 	

@@ -1,4 +1,4 @@
-package com.CordovaRetrofitHttpPlugin;
+package com.itsoft;
 
 
 public class ApiUtils {

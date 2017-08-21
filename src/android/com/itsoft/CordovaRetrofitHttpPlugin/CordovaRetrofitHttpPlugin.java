@@ -1,4 +1,4 @@
-package com.CordovaRetrofitHttpPlugin;
+package com.itsoft;
 
 
 import org.apache.cordova.CordovaPlugin;
@@ -35,7 +35,13 @@ public class CordovaRetrofitHttpPlugin extends CordovaPlugin {
             RetrofitHttpGet get = new RetrofitHttpGet(urlString, paramsMap, headersMap, callbackContext);
             cordova.getThreadPool().execute(get);
         } else if(action.equals("post")) {
-            return false;
+            String urlString = args.getString(0);
+            JSONObject params = args.getJSONObject(1);
+            JSONObject headers = args.getJSONObject(2);
+            HashMap<?, ?> paramsMap = this.getMapFromJSONObject(params);
+            HashMap<String, String> headersMap = this.getStringMapFromJSONObject(headers);
+            RetrofitHttpPost get = new RetrofitHttpPost(urlString, paramsMap, headersMap, callbackContext);
+            cordova.getThreadPool().execute(get);
         } else if (action.equals("uploadFile")) {
             return false;
         } else if (action.equals("downloadFile")) {

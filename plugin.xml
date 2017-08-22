@@ -28,6 +28,7 @@
 		<source-file src="src/android/com/itsoft/CordovaRetrofitHttpPlugin/ApiUtils.java" target-dir="src/com/itsoft" />
 		<source-file src="src/android/com/itsoft/CordovaRetrofitHttpPlugin/RetrofitHttpGet.java" target-dir="src/com/itsoft" />
 		<source-file src="src/android/com/itsoft/CordovaRetrofitHttpPlugin/RetrofitHttpPost.java" target-dir="src/com/itsoft" />
+		<source-file src="src/android/com/itsoft/CordovaRetrofitHttpPlugin/RetrofitHttpFileDownload.java" target-dir="src/com/itsoft" />
 		<source-file src="src/android/com/itsoft/CordovaRetrofitHttpPlugin/RetrofitClient.java" target-dir="src/com/itsoft" />
 		<source-file src="src/android/com/itsoft/CordovaRetrofitHttpPlugin/RetrofitHttpRequest.java" target-dir="src/com/itsoft" />
 		<source-file src="src/android/com/itsoft/CordovaRetrofitHttpPlugin/Tls12SocketFactory.java" target-dir="src/com/itsoft" />

@@ -32,6 +32,9 @@
 		post: function(url, params, headers, success, failure) {
 			headers = mergeHeaders(this.headers, headers);
 			return exec(success, failure, "CordovaRetrofitHttpPlugin", "post", [url, params, headers]);
+		},
+		downloadFile: function() {
+
 		}
 	};
 
@@ -77,6 +80,9 @@
 					},
 					post: function(url, params, headers) {
 						return generatePromise(retrofitHTTP.post, [url, params, headers], true);
+					},
+					downloadFile: function() {
+						
 					}
 				};
 

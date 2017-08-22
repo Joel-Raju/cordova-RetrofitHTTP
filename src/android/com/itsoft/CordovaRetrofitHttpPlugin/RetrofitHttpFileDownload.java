@@ -23,14 +23,16 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 import com.google.gson.JsonElement;
 
+import okhttp3.ResponseBody;
+
 import com.google.gson.JsonSyntaxException;
 
  
-public class RetrofitHttpPost extends RetrofitHttpRequest implements Runnable {
+public class RetrofitHttpFileDownload extends RetrofitHttpRequest implements Runnable {
     
     private JsonObject responseObject = new JsonObject();
 
-    public RetrofitHttpPost(String urlString, Map<?, ?> params, Map<String, String> headers, CallbackContext callbackContext) {
+    public RetrofitHttpFileDownload(String urlString, Map<?, ?> params, Map<String, String> headers, CallbackContext callbackContext) {
         super(urlString, params, headers, callbackContext);
     }
     
@@ -39,18 +41,22 @@ public class RetrofitHttpPost extends RetrofitHttpRequest implements Runnable {
 
         ApiService apiService = ApiUtils.getService();
 
-        Call<JsonElement> call = apiService.postRequestWithDynamicUrl(this.getUrlString(), this.getHeaders());
+        Call<ResponseBody> call = apiService.downloadFileWithDynamicUrl(this.getUrlString(), this.getHeaders());
 
 
         try {
-            call.enqueue(new Callback<JsonElement>() {
+            call.enqueue(new Callback<ResponseBody>() {
 
                 @Override
-                public void onResponse(Call<JsonElement> call, Response<JsonElement> response) {
+                public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
                     try {
                         if (response.isSuccessful() && response.body() != null) {
                             System.out.println(response.body().toString());
                             JsonElement responseElement = new JsonParser().parse(response.body().toString());
+
+
+                            InputStream inputStream  = body.byteStream();
+
                             if (responseElement.isJsonObject()) {
                                 responseObject.add("data", responseElement.getAsJsonObject());    
                                 getCallbackContext().success(new JSONObject(responseObject.toString()));
@@ -75,7 +81,7 @@ public class RetrofitHttpPost extends RetrofitHttpRequest implements Runnable {
                 }
      
                 @Override
-                public void onFailure(Call<JsonElement> call, Throwable t) {
+                public void onFailure(Call<ResponseBody> call, Throwable t) {
                     try {
                         responseObject.addProperty("error", t.toString());
                         Log.e(TAG, t.toString());

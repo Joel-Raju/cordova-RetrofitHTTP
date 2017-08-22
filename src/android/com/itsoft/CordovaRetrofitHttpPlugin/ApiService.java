@@ -9,14 +9,21 @@ import retrofit2.http.Url;
 import retrofit2.http.HeaderMap;
 import retrofit2.http.GET;
 import retrofit2.http.POST;
+import retrofit2.http.Streaming;
+
+import okhttp3.ResponseBody;
 
 import com.google.gson.JsonElement;
 
 public interface ApiService {
 
 	@GET()
-    Call<JsonElement> getRequest(@Url String url, @HeaderMap Map<String, String> headers);
+    Call<JsonElement> getRequestWithDynamicUrl(@Url String url, @HeaderMap Map<String, String> headers);
 
     @POST()
-    Call<JsonElement> postRequest(@Url String url,  @HeaderMap Map<String, String> headers);
+    Call<JsonElement> postRequestWithDynamicUrl(@Url String url,  @HeaderMap Map<String, String> headers);
+
+    @Streaming
+    @GET()
+    Call<ResponseBody> downloadFileWithDynamicUrl(@Url String url,  @HeaderMap Map<String, String> headers);
 }

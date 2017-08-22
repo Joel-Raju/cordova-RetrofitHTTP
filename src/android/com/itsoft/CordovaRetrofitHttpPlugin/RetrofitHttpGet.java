@@ -39,7 +39,7 @@ public class RetrofitHttpGet extends RetrofitHttpRequest implements Runnable {
 
         ApiService apiService = ApiUtils.getService();
 
-        Call<JsonElement> call = apiService.getRequest(this.getUrlString(), this.getHeaders());
+        Call<JsonElement> call = apiService.getRequestWithDynamicUrl(this.getUrlString(), this.getHeaders());
 
 
         try {

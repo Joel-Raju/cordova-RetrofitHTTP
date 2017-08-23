@@ -49,7 +49,6 @@ public class RetrofitHttpPost extends RetrofitHttpRequest implements Runnable {
                 public void onResponse(Call<JsonElement> call, Response<JsonElement> response) {
                     try {
                         if (response.isSuccessful() && response.body() != null) {
-                            System.out.println(response.body().toString());
                             JsonElement responseElement = new JsonParser().parse(response.body().toString());
                             if (responseElement.isJsonObject()) {
                                 responseObject.add("data", responseElement.getAsJsonObject());    

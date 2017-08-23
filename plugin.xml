@@ -14,6 +14,10 @@
 				<param name="android-package" value="com.itsoft.CordovaRetrofitHttpPlugin" />
 			</feature>
 		</config-file>
+
+		<config-file target="AndroidManifest.xml" parent="/manifest">
+            <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+        </config-file>
 		
 		<config-file parent="/*" target="AndroidManifest.xml"></config-file>
 
@@ -21,7 +25,8 @@
 		<source-file src="support/libs/converter-gson-2.3.0.jar" target-dir="libs" />
 		<source-file src="support/libs/okhttp-3.8.1.jar" target-dir="libs" />
 		<source-file src="support/libs/okio-1.13.0.jar" target-dir="libs" />
-		<source-file src="support/libs/gson-2.8.1.jar" target-dir="libs" />		
+		<source-file src="support/libs/gson-2.8.1.jar" target-dir="libs" />
+		<source-file src="support/libs/commons-io-2.5.jar" target-dir="libs" />
 
 		<source-file src="src/android/com/itsoft/CordovaRetrofitHttpPlugin/CordovaRetrofitHttpPlugin.java" target-dir="src/com/itsoft" />
 		<source-file src="src/android/com/itsoft/CordovaRetrofitHttpPlugin/ApiService.java" target-dir="src/com/itsoft" />

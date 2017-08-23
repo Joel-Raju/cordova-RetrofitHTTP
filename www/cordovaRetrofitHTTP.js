@@ -1,6 +1,7 @@
 (function() {
 
-	var exec = require('cordova/exec');
+	var exec  = require('cordova/exec');
+	var entry = require('cordova-plugin-file.FileEntry');
 
 	function mergeHeaders(globalHeaders, localHeaders) {
 	    var globalKeys = Object.keys(globalHeaders);
@@ -33,8 +34,18 @@
 			headers = mergeHeaders(this.headers, headers);
 			return exec(success, failure, "CordovaRetrofitHttpPlugin", "post", [url, params, headers]);
 		},
-		downloadFile: function() {
-
+		downloadFile: function(url, params, headers, filePath, success, failure) {
+			headers = mergeHeaders(this.headers, headers);
+	        var win = function(result) {
+	            entry.isDirectory = false;
+	            entry.isFile = true;
+	            entry.name = result.file.name;
+	            entry.fullPath = result.file.fullPath;
+	            entry.filesystem = new FileSystem(result.file.filesystemName || (result.file.filesystem == window.PERSISTENT ? 'persistent' : 'temporary'));
+	            entry.nativeURL = result.file.nativeURL;
+	            success(entry);
+	        };
+	        return exec(success, failure, "CordovaRetrofitHttpPlugin", "downloadFile", [url, params, headers, filePath]);
 		}
 	};
 
@@ -81,8 +92,8 @@
 					post: function(url, params, headers) {
 						return generatePromise(retrofitHTTP.post, [url, params, headers], true);
 					},
-					downloadFile: function() {
-						
+					downloadFile: function(url, params, headers, filePath) {
+						return generatePromise(retrofitHTTP.downloadFile, [url, params, headers, filePath], true);
 					}
 				};
 

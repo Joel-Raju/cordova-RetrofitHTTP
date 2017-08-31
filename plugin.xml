@@ -11,7 +11,7 @@
 	<platform name="android">
 		<config-file parent="/*" target="res/xml/config.xml">
 			<feature name="CordovaRetrofitHttpPlugin">
-				<param name="android-package" value="com.itsoft.CordovaRetrofitHttpPlugin" />
+				<param name="android-package" value="com.github.joelraju.CordovaRetrofitHttpPlugin" />
 			</feature>
 		</config-file>
 
@@ -28,15 +28,15 @@
 		<source-file src="support/libs/gson-2.8.1.jar" target-dir="libs" />
 		<source-file src="support/libs/commons-io-2.5.jar" target-dir="libs" />
 
-		<source-file src="src/android/com/itsoft/CordovaRetrofitHttpPlugin/CordovaRetrofitHttpPlugin.java" target-dir="src/com/itsoft" />
-		<source-file src="src/android/com/itsoft/CordovaRetrofitHttpPlugin/ApiService.java" target-dir="src/com/itsoft" />
-		<source-file src="src/android/com/itsoft/CordovaRetrofitHttpPlugin/ApiUtils.java" target-dir="src/com/itsoft" />
-		<source-file src="src/android/com/itsoft/CordovaRetrofitHttpPlugin/RetrofitHttpGet.java" target-dir="src/com/itsoft" />
-		<source-file src="src/android/com/itsoft/CordovaRetrofitHttpPlugin/RetrofitHttpPost.java" target-dir="src/com/itsoft" />
-		<source-file src="src/android/com/itsoft/CordovaRetrofitHttpPlugin/RetrofitHttpFileDownload.java" target-dir="src/com/itsoft" />
-		<source-file src="src/android/com/itsoft/CordovaRetrofitHttpPlugin/RetrofitClient.java" target-dir="src/com/itsoft" />
-		<source-file src="src/android/com/itsoft/CordovaRetrofitHttpPlugin/RetrofitHttpRequest.java" target-dir="src/com/itsoft" />
-		<source-file src="src/android/com/itsoft/CordovaRetrofitHttpPlugin/Tls12SocketFactory.java" target-dir="src/com/itsoft" />
+		<source-file src="src/android/com/github/joelraju/CordovaRetrofitHttpPlugin/CordovaRetrofitHttpPlugin.java" target-dir="src/com/github/joelraju" />
+		<source-file src="src/android/com/github/joelraju/CordovaRetrofitHttpPlugin/ApiService.java" target-dir="src/com/github/joelraju" />
+		<source-file src="src/android/com/github/joelraju/CordovaRetrofitHttpPlugin/ApiUtils.java" target-dir="src/com/github/joelraju" />
+		<source-file src="src/android/com/github/joelraju/CordovaRetrofitHttpPlugin/RetrofitHttpGet.java" target-dir="src/com/github/joelraju" />
+		<source-file src="src/android/com/github/joelraju/CordovaRetrofitHttpPlugin/RetrofitHttpPost.java" target-dir="src/com/github/joelraju" />
+		<source-file src="src/android/com/github/joelraju/CordovaRetrofitHttpPlugin/RetrofitHttpFileDownload.java" target-dir="src/com/github/joelraju" />
+		<source-file src="src/android/com/github/joelraju/CordovaRetrofitHttpPlugin/RetrofitClient.java" target-dir="src/com/github/joelraju" />
+		<source-file src="src/android/com/github/joelraju/CordovaRetrofitHttpPlugin/RetrofitHttpRequest.java" target-dir="src/com/github/joelraju" />
+		<source-file src="src/android/com/github/joelraju/CordovaRetrofitHttpPlugin/Tls12SocketFactory.java" target-dir="src/com/github/joelraju" />
 
 	</platform>
 	

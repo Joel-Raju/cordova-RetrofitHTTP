@@ -1,4 +1,4 @@
-package com.itsoft;
+package com.github.joelraju;
 
 
 import org.apache.cordova.CordovaPlugin;

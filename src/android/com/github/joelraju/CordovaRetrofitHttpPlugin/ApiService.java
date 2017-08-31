@@ -1,4 +1,4 @@
-package com.itsoft;
+package com.github.joelraju;
 
 import java.util.List;
 import java.util.Map;

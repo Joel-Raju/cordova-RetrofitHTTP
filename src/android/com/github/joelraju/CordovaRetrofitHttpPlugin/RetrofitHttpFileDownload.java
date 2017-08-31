@@ -1,7 +1,7 @@
 /**
  * A HTTP plugin for Cordova / Phonegap
  */
-package com.itsoft;
+package com.github.joelraju;
 
 import java.io.File;
 import java.io.IOException;

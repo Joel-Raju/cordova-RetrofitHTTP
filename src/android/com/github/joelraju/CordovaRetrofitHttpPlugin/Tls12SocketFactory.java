@@ -1,4 +1,4 @@
-package com.itsoft;
+package com.github.joelraju;
 
 import java.io.IOException;
 import java.net.InetAddress;

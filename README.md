@@ -6,7 +6,9 @@ This project is inspired by https://github.com/wymsee/cordova-HTTP
 
 ## Installation
 
+```shell
 cordova plugin add cordova-plugin-retrofit-http
+```
 
 ## Usage
 
@@ -94,7 +96,7 @@ The error function receives a response object with 3 properties: status, error a
 
 JAR
 
-```
+```shell
 -commons-io-2.5.jar
 -converter-gson-2.3.0.jar
 -gson-2.8.1.jar
@@ -104,6 +106,6 @@ JAR
 
 Cordova Plugin
 
-```
+```shell
 -cordova-plugin-file
 ```

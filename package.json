@@ -1,0 +1,25 @@
+{
+  "name": "cordova-plugin-retrofit-http",
+  "version": "0.0.1",
+  "description": "A Cordova/ PhoneGap Plugin (for Android only) which helps to make HTTP requests using the awesome Retrofit 2 library under the hood.",
+  "cordova": {
+    "id": "cordova-plugin-retrofit-http",
+    "platforms": [
+      "android"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Joel-Raju/cordova-RetrofitHTTP.git"
+  },
+  "keywords": [
+    "ecosystem:cordova",
+    "cordova-android"
+  ],
+  "author": "Joel Raju (joelraju.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Joel-Raju/cordova-RetrofitHTTP/issues"
+  },
+  "homepage": "https://github.com/Joel-Raju/cordova-RetrofitHTTP#readme"
+}

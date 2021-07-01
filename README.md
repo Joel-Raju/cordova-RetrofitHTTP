@@ -4,6 +4,10 @@ A Cordova/ PhoneGap Plugin (for Android only) which helps to make HTTP requests 
 
 This project is inspired by https://github.com/wymsee/cordova-HTTP
 
+## Installation
+
+cordova plugin add cordova-plugin-retrofit-http
+
 ## Usage
 
 ### AngularJS

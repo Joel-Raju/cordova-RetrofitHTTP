@@ -1,6 +1,6 @@
 {
   "name": "cordova-plugin-retrofit-http",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A Cordova/ PhoneGap Plugin (for Android only) which helps to make HTTP requests using the awesome Retrofit 2 library under the hood.",
   "cordova": {
     "id": "cordova-plugin-retrofit-http",
